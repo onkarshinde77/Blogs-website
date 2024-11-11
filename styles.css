@@ -1,0 +1,141 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    height:100%;
+    width:100%;
+    background-color: rgb(171, 173, 173);
+}
+a{
+    text-decoration:none;
+}
+.container{
+    max-width:95vw;
+    padding:2rem 1rem;
+    margin:0 auto;
+}
+.header{
+    margin-bottom:2.8rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.headerTitle{
+    margin-bottom:1rem;
+    font-size:1.4rem;
+    line-height:2rem;
+    text-align:center;
+}
+#paragraph{
+    max-width:568px;    
+    text-align:center;
+}
+.main{
+    display:grid;
+    justify-content:center;
+    grid-template-columns:repeat(1,0fr);
+    gap:1.5rem;
+}
+@media (min-width: 400px) {
+    .main {
+        grid-template-columns: repeat(2, 0fr);
+    }
+}
+@media (min-width: 630px) {
+    .main {
+        grid-template-columns: repeat(3, 0fr);
+    }
+}
+@media (min-width: 1130px) {
+    .main {
+        grid-template-columns: repeat(4, 0fr);
+    }
+}
+
+.cardContainer{
+    border:1px solid rgb(217, 224, 228);
+    overflow:hidden;
+    border-radius:10px;
+    height:315px;
+    width:200px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column; 
+    background-color: aliceblue;
+}
+@media (min-width:768px){
+    .cardContainer{
+        width:248px;
+    }
+}
+.cardImage{
+    object-fit:cover;
+    object-position:center;
+    position:relative;
+    height:150px;
+    width:248px;
+    
+}
+.cardContainer:hover .cardImage{
+    transform: scale(1.1);
+    transition-duration:200ms;
+}
+.cardHeader{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin-top:5px;
+    margin-bottom:0px;
+    margin-left:15px;
+    margin-right:10px;
+}
+.cardHeader a{
+    color:black;
+    font-style:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cardHeader a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+
+.cardFooter{
+    margin-right:7px;
+    padding-right:1px;
+    /* background-color: aqua; */
+    align-items:center;
+    display:flex;
+    margin-top:5px;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.author_avatar{
+    margin:4px;
+    height:40px;
+    width:40px;
+    border:2px solid rgb(160, 159, 159);
+    border-radius:25px;
+    background-color:rgb(226, 223, 223);
+}
+.author{
+    /* background-color: rgb(60, 87, 87); */
+    display:flex;
+    flex-direction:row;
+}
+.tag{
+    margin-top:7px;
+}
+#button{
+    background-color: rgb(229, 222, 230);
+}
+#authorName{
+    color:blue;
+}
+#dateName{
+    margin-top:8px;
+}
+#dateName #date{
+    font-size:12px;
+}
